@@ -1,0 +1,51 @@
+input {
+min-width:150px;
+height: 40px;
+padding: 8px 72px 8px 72px;
+border-radius: 8px;
+border: 1px solid #808080;
+color: black;
+}
+
+
+.first-button {
+    width: 120px;
+    height: 40px;
+    padding: 8px 16px 8px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #4E75FF;   
+    border: transparent; 
+    color: white;
+}
+
+.second-button {
+    width: 120px;
+    height: 40px;
+    padding: 8px 16px 8px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #FF4E4E;  
+    border: transparent; 
+    color: white;
+}
+
+div {
+display: flex;
+margin-top: 48px;
+margin-right: 44px;
+}
+
+#controls {
+    background-color: #F6F6FE;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 486px;
+    height: 109px;
+}
+
+#boxes {
+    background-color: #F6F6FE;
+    padding-top: 32px;
+}

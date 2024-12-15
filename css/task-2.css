@@ -1,0 +1,8 @@
+.item-img {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px;
+    padding-bottom: 48px;
+}
+
