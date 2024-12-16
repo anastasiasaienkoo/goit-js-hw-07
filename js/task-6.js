@@ -7,38 +7,40 @@ function getRandomHexColor() {
 const inputinf = document.querySelector('.input');
 const buttonCre = document.querySelector('[data-create]');
 const buttonDl = document.querySelector('[data-destroy]');
-  
+const box = document.querySelector('#boxes');
+
+
 
 
 function createBoxes(amount){
-  const box = document.querySelector('#boxes');
   box.innerHTML = '';
+  const boxFragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
     const boxcreate = document.createElement('div');
+    boxcreate.classList.add("box");
     const size = 30 + i * 10;
     boxcreate.style.width = `${size}px`;
     boxcreate.style.height = `${size}px`;
     boxcreate.style.backgroundColor = getRandomHexColor();
-    box.appendChild(boxcreate);
+    boxFragment.appendChild(boxcreate);
   }
-  console.log(box);
+  box.append(boxFragment);
+  inputinf.value = "";
   }
 
 
 
 
 function deletedBoxes() {
-  const boxDel = document.querySelector('#boxes');
   boxDel.innerHTML = '';
 }
 
 buttonCre.addEventListener('click', () => {
   const amount = Number(inputinf.value);
-  if(amount => 1 && amount <= 100){
+  if(amount >= 1 && amount <= 100){
     createBoxes(amount);
   }
-  inputinf.value = '';
 });
 
 buttonDl.addEventListener('click', deletedBoxes);
