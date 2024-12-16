@@ -2,9 +2,14 @@ const infos = document.querySelector('.login-form');
 
 
 infos.addEventListener("submit", (event) => {
-    const infInpt = infos.querySelectorAll('input');
     event.preventDefault();
+    const infInpt = infos.querySelectorAll('input');
     let allFills = true;
+    const formData = {
+        [infos.elements.email.name]: infos.elements.email.value,
+        [infos.elements.password.name]: infos.elements.password.value,
+    }
+
 
     infInpt.forEach(el => {
         if (el.value.trim() === ""){
@@ -14,7 +19,8 @@ infos.addEventListener("submit", (event) => {
         }
     });
     if(allFills){
-        infos.submit();
+        infos.reset();
+        console.log(formData);
     }
 });
 

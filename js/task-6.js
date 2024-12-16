@@ -22,7 +22,11 @@ function createBoxes(amount){
     boxcreate.style.backgroundColor = getRandomHexColor();
     box.appendChild(boxcreate);
   }
-}
+  console.log(box);
+  }
+
+
+
 
 function deletedBoxes() {
   const boxDel = document.querySelector('#boxes');
