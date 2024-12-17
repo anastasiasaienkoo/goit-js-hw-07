@@ -33,7 +33,7 @@ function createBoxes(amount){
 
 
 function deletedBoxes() {
-  boxDel.innerHTML = '';
+  box.innerHTML = '';
 }
 
 buttonCre.addEventListener('click', () => {
